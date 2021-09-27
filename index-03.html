@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .inputs {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 100%;
+        margin: auto;
+        background-color: #aaa;
+      }
+      .inputs input {
+        display: block;
+        width: 100%;
+        height: 80px;
+        margin-bottom: 80px;
+      }
+      .scroll-mode {
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="inputs">
+      <a href="./index.html">First inputs</a>
+      <p>height, bottom, right, scroll</p>
+      <button type="button" class="add-scroll">
+        scroll <span>false</span>
+      </button>
+      <label>
+        input-01
+        <input type="text" />
+      </label>
+      <label>
+        input-02
+        <input type="text" />
+      </label>
+      <label>
+        input-03
+        <input type="text" />
+      </label>
+      <label>
+        input-04
+        <input type="text" />
+      </label>
+    </form>
+  </body>
+  <script>
+    const addScroll = document.querySelector(".add-scroll");
+    const inputs = document.querySelector(".inputs");
+    let isScrollOn = false;
+
+    addScroll.addEventListener("click", () => {
+      inputs.classList.toggle("scroll-mode");
+      const on_off = addScroll.querySelector("span");
+      on_off.innerHTML = isScrollOn;
+      isScrollOn = !isScrollOn;
+    });
+  </script>
+</html>
