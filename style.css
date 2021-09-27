@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 .inputs {
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   left: 0;
