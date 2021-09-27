@@ -12,6 +12,7 @@
   margin: auto;
   background-color: #aaa;
 }
+.inputs-02 input,
 .inputs input {
   display: block;
   width: 100%;
